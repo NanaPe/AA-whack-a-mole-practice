@@ -1,0 +1,140 @@
+
+.wgs{
+  position:relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 200px; /* Or however tall you want it to be */
+  width: 320px; 
+}
+
+.wgs__mole {
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.25s;
+}
+
+
+.wgs__mole-head{
+transition: 0.25s;
+  display:block;
+  width: 50%;
+  height: auto;
+  margin-left: 75px;
+}
+
+.wgs__mole-head--hidden {
+  transform: translateY(200%);
+}
+
+
+
+.wgs__dirt-pile {
+  position:absolute;
+  bottom: 0;
+  height: 110px;
+  width: 100%;
+}
+
+
+.sb__game-over {
+  display: none;
+  /* Additional styles for the game over message */
+  color: red;
+  font-size: 3em;
+}
+
+.sb__game-over--visible {
+  display: block;
+}
+
+.pf {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 105, 180, 0.7);
+  border-radius: 50%; /* Add this line to make it a circle */
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.sb {
+  display:flex;
+  align-items: flex-;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.sb__score-holder{
+  background-color: rgb(136, 193, 237);
+  display: block;
+  width: 10%;
+  font-size: 30px;
+  height: auto;
+  text-align: center;
+  border-radius: 21px;
+  color:rgb(71, 71, 71);
+  padding:10px 0px ;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sb__mole-counter{
+  background-color: rgb(245, 145, 44);
+  display: block;
+  width: 10%;
+  font-size: 30px;
+  height: auto;
+  text-align: center;
+  border-radius: 21px;
+  color:rgb(255, 255, 255);
+  padding:10px 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* UNCOMMENT THE CODE BELOW WHEN DIRECTED */
+/* .sb {
+  background-color: cornflowerblue;
+  border-bottom: 1px solid #645DED;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  font-size: 30px;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+} */
+
+/* .sb__mole-counter {
+  flex: 1 0 0;
+  text-align: right;
+} */
+
+/* .sb__score-holder {
+  flex: 1 0 0;
+} */
+
+/* .sb__game-over--hidden {
+  display: none;
+} */
